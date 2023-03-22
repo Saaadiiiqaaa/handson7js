@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./file2.css">
+</head>
+<body>
+    <h1 class="h1">PROBLEM SOLVING </h1>
+    <p >1. find the smaller angle</p>
+    <div>
+    <pre>
+        var Minimal_Angle = (h, m) => 
+{
+    h=h%12;
+    let min=(m*360)/60;
+    let hour=(h*360)/12+(m*360)/(12*60);
+    let angle=Math.abs(hour-min);
+    if(angle>180){
+      return 360-angle;
+    }
+    else{
+      return angle;
+    }
+};
+ 
+         
+        
+    </pre>
+   </div>
+   <p>2. CHECK WHETHER THE YEAR IS LEAP OR NOT</p>
+   <div>
+     <Pre>
+    
+         
+var Check_Leap = (year) => 
+{
+ if(year%400===0  ){
+   return "Leap Year"
+ }
+ else if(year%100===0){
+   return "Non Leap Year"
+ }
+ else if(year%4===0){
+   return "Leap Year"
+ }
+  else{
+    return "Non Leap Year"
+  }
+
+};
+ 
+         
+        
+  </Pre>
+</div>
+
+<P> 3. PERFECT NUMBER CHECK</P>
+<div>
+    <pre>
+        var Perfect_Check = (N) => 
+        {
+            var flag,remainder,addition = 0,i;
+                    
+                        flag = N;
+                        for(i = 0; i <= N; i++)
+                        {
+                            remainder = N%i;
+                            if(remainder ===0)
+                            {
+                                addition += i;
+                            }
+                        }
+                    if(addition === flag)
+                        {
+                            return "Yes"
+                        }
+                        else
+                        {
+                            return "NO"
+                        }
+                    
+                
+        };
+        
+    </pre>
+</div>
+
+<P>4.REVERSE THE NU8MBER
+</P>
+<div>
+    <pre>var Reverse_Number = (N) => 
+        {
+          let b, sum=0
+          while(N>0){
+          b = N % 10;
+              sum = sum * 10 + b;
+              N = parseInt(N / 10);
+          }
+         return sum;
+        };
+         
+        
+</pre>
+</div>
+<P>5. SUBSTRING CHCECK </P>
+<div>
+    <pre>
+        var Substring_Check = (S1, S2) => 
+{
+     if(S2.indexOf(S1)){
+       return "YES"
+     }
+     else if(!S2.indexOf(S1)){
+       return "NO"
+     }
+};
+        
+        
+        
+     </pre>
+</div>
+
+
+
+</body>
+</html>
